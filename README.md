@@ -7,42 +7,21 @@ This is a simple node application that shows on the main page server on which it
 ## Usage
 
 ```bash
-docker run -p 3000:3000 -e SERVER_MESSAGE="Hexlet Awesome Server" -e ROLLBAR_TOKEN="<your token>" hexletcomponents/devops-example-app
-# open http://0.0.0.0:3000 in browser
+docker run -p 8080:8080 -e NODE_ENV=development antmbx/devops-for-programmers-project-74 make dev
+
+# open http://0.0.0.0:8080 in browser
  ```
-
-## Requirements
-
-* Make
-
-## Install
-
-```bash
-make setup
-```
-
-You may pass environment variable `SERVER_MESSAGE`, and its value shows on the main page.
 
 Edit *.env* file to set up environment variables.
 
 ```env
-SERVER_MESSAGE="Hexlet Awesome Server"
-ROLLBAR_TOKEN=<your token>
+DATABASE_HOST=[db host]
+DATABASE_NAME=[db name]
+DATABASE_USERNAME=[db username]
+DATABASE_PASSWORD=[db password]
 ```
 
-## Start application
 
-```bash
-make start
-# open http://0.0.0.0:3000 in browser
-```
-
-![Screen of devops-example-app](assets/app.png)
+![Screen of example-app](assets/app.png)
 
 ---
-
-[![Hexlet Ltd. logo](https://raw.githubusercontent.com/Hexlet/assets/master/images/hexlet_logo128.png)](https://hexlet.io?utm_source=github&utm_medium=link&utm_campaign=devops-example-app)
-
-This repository is created and maintained by the team and the community of Hexlet, an educational project. [Read more about Hexlet](https://hexlet.io?utm_source=github&utm_medium=link&utm_campaign=devops-example-app).
-
-See most active contributors on [hexlet-friends](https://friends.hexlet.io/).
